@@ -24,6 +24,17 @@ body {
   }
 }
 
+#form-container {
+  width: 60%;
+  margin: auto;
+  justify-content: center;
+  color: white;
+
+  #formModal {
+    color: black;
+  }
+}
+
 #view {
   display: flex;
   flex-wrap: wrap;

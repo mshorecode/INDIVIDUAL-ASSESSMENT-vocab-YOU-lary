@@ -22,6 +22,7 @@ const showVocab = (array) => {
               <p class="card-text bold">Description: ${item.definition}</p>
               <hr>
               <p class="card-text bold">Language: ${item.language_tech}</p>
+              <p class="card-text bold">Creation Date: ${item.timeSubmitted}</p>
           </div>
         </div>`;
     });

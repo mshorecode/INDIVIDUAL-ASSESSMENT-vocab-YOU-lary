@@ -1,15 +1,20 @@
 import { getVocabulary } from '../api/vocabularyData';
+import addVocabForm from '../components/forms/addVocabForm';
 import { emptyVocab, showVocab } from '../pages/vocabulary';
 
-const navigationEvents = () => {
+const navigationEvents = (user) => {
   document.querySelector('#all-vocabulary').addEventListener('click', () => {
-    getVocabulary().then((array) => {
+    getVocabulary(user.uid).then((array) => {
       if (array.length) {
         showVocab(array);
       } else {
         emptyVocab();
       }
     });
+  });
+
+  document.querySelector('#create-entry').addEventListener('click', () => {
+    addVocabForm();
   });
 
   // TODO: Create FILTER API Call
