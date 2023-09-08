@@ -126,6 +126,15 @@ const filterVocabularyByHTML = () => new Promise((resolve, reject) => {
 });
 
 // TODO: STRETCH...SEARCH VOCABULARY ENTRIES
+const searchVocabulary = (input, uid) => new Promise((resolve, reject) => {
+  getVocabulary(uid).then((array) => {
+    const results = array.filter((vocab) => (
+      vocab.title.toLowerCase().includes(input)
+      || vocab.definition.toLowerCase().includes(input)
+    ));
+    resolve(results);
+  }).catch(reject);
+});
 
 export {
   getVocabulary,
@@ -136,4 +145,5 @@ export {
   filterVocabularyByJavascript,
   filterVocabularyByCSS,
   filterVocabularyByHTML,
+  searchVocabulary,
 };
