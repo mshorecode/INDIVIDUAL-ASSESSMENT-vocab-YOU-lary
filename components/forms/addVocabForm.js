@@ -1,7 +1,8 @@
+import { getSingleVocabulary } from '../../api/vocabularyData';
 import clearDom from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
 
-const addVocabForm = (obj = {}) => {
+const addVocabForm = (uid, obj = {}) => {
   clearDom();
   const domString = `
     <form id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">
@@ -14,8 +15,8 @@ const addVocabForm = (obj = {}) => {
         <textarea class="form-control" placeholder="Definition" id="definition" style="height: 100px">${obj.description || ''}</textarea>
       </div>
       <div class="form-group">
-        <label for="language_tech">Language:</label>
-        <input type="text" class="form-control" id="language-tech" aria-describedby="vocabularyLanguage" placeholder="Language/Tech" value="${obj.language_tech || ''}" required>
+        <label for="languageTech">Language:</label>
+        <input type="text" class="form-control" id="language-tech" aria-describedby="vocabularyLanguage" placeholder="Language/Tech" value="${obj.languageTech || ''}" required>
       </div>
       <br>
       <button type="submit" class="btn btn-primary">Submit
@@ -23,6 +24,7 @@ const addVocabForm = (obj = {}) => {
     </form>`;
 
   renderToDOM('#form-container', domString);
+  getSingleVocabulary(`${obj.firebaseKey || ''}`, uid);
 };
 
 export default addVocabForm;

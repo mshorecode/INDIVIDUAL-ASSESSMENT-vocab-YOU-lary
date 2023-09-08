@@ -19,10 +19,11 @@ const showVocab = (array) => {
         <div class="card">
           <div class="card-body" style="height: 180px;">
             <h5 class="card-title">${item.title}</h5>
-              <p class="card-text bold">Description: ${item.definition}</p>
+              <p class="card-text bold">Definition: ${item.definition}</p>
               <hr>
-              <p class="card-text bold">Language: ${item.language_tech}</p>
-              <p class="card-text bold">Creation Date: ${item.timeSubmitted}</p>
+              <p class="card-text bold">Language: ${item.languageTech}</p>
+              <p class="btn btn-info" id="update-vocab--${item.firebaseKey}">Update</p>
+              <p class="btn btn-danger" id="delete-vocab--${item.firebaseKey}">Delete</p>
           </div>
         </div>`;
     });
