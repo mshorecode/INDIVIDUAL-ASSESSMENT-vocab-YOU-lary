@@ -1,11 +1,17 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
 
 
 body {
   background-color: #282828;
   text-align: center;
   margin-top: 100px;
+  font-family: Hack NF;
+}
+
+h1 {
+  color: #fbf1c7;
 }
 
 #login-form-container {
@@ -18,10 +24,33 @@ body {
     color: #fbf1c7;
     font-weight: 600;
     border: 1px solid black;
-    box-shadow: -2px 2px 0px #fb4934;
+    box-shadow: 2px 2px 0px #fb4934;
   }
 }
 
+#form-container {
+  width: 60%;
+  margin: auto;
+  justify-content: center;
+  color: white;
+
+  #formModal {
+    color: black;
+  }
+}
+
+#view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  gap: 2em;
+  
+}
+
+.navbar {
+  background-color: #32302f !important;
+}
 .navbar-brand {
   color: #458588;
   font-weight: 700;
