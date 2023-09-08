@@ -40,7 +40,8 @@ const updateVocabulary = (payload) => new Promise((resolve, reject) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(payload)
-  }).then((response) => response.json())
+  })
+    .then((response) => response.json())
     .then((data) => resolve(data))
     .catch(reject);
 });
@@ -51,7 +52,8 @@ const deleteVocabulary = (firebaseKey) => new Promise((resolve, reject) => {
     headers: {
       'Content-Type': 'application/json'
     },
-  }).then((response) => response.json())
+  })
+    .then((response) => response.json())
     .then(resolve)
     .catch(reject);
 });
@@ -68,6 +70,61 @@ const getSingleVocabulary = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// FILTER CALLS
+const filterVocabularyByJavascript = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="languageTech"&equalTo="Javascript"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const filterVocabularyByCSS = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="languageTech"&equalTo="CSS"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const filterVocabularyByHTML = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="languageTech"&equalTo="HTML"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
 // TODO: STRETCH...SEARCH VOCABULARY ENTRIES
 
 export {
@@ -76,4 +133,7 @@ export {
   updateVocabulary,
   getSingleVocabulary,
   deleteVocabulary,
+  filterVocabularyByJavascript,
+  filterVocabularyByCSS,
+  filterVocabularyByHTML,
 };
