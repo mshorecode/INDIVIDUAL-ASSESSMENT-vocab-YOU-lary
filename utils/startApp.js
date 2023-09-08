@@ -10,6 +10,11 @@ import { emptyVocab, showVocab } from '../pages/vocabulary';
 const startApp = (user) => {
   domBuilder(user);
   navBar(user);
+  logoutButton();
+  navigationEvents(user);
+  formEvents(user);
+  domEvents(user);
+
   getVocabulary(user.uid).then((array) => {
     if (array.length) {
       showVocab(array);
@@ -17,10 +22,6 @@ const startApp = (user) => {
       emptyVocab();
     }
   });
-  logoutButton();
-  navigationEvents(user);
-  formEvents(user);
-  domEvents(user);
 };
 
 export default startApp;
