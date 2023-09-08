@@ -27,7 +27,6 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('css-btn')) {
-      console.warn('YOU CLICKED CSS', e.target.id);
       filterVocabularyByCSS().then((array) => {
         if (array.length) {
           showVocab(array);
@@ -38,7 +37,6 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('html-btn')) {
-      console.warn('YOU CLICKED HTML', e.target.id);
       filterVocabularyByHTML().then((array) => {
         if (array.length) {
           showVocab(array);
@@ -49,7 +47,6 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('js-btn')) {
-      console.warn('YOU CLICKED JS', e.target.id);
       filterVocabularyByJavascript().then((array) => {
         if (array.length) {
           showVocab(array);

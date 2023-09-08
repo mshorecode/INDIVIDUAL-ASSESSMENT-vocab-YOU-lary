@@ -1,4 +1,4 @@
-import { getVocabulary } from '../api/vocabularyData';
+import { getVocabulary, searchVocabulary } from '../api/vocabularyData';
 import addVocabForm from '../components/forms/addVocabForm';
 import { emptyVocab, showVocab } from '../pages/vocabulary';
 
@@ -17,11 +17,18 @@ const navigationEvents = (user) => {
     addVocabForm();
   });
 
-  // TODO: Create FILTER API Call
   document.querySelector('#search').addEventListener('keyup', (e) => {
     const searchVocab = document.querySelector('#search').value.toLowerCase();
-    console.warn(searchVocab); // TODO: Console warn successful but not clearing search box
-    if (e.keycode === 13) {
+    console.warn(searchVocab);
+    if (e.keyCode === 13) {
+      searchVocabulary(searchVocab, user.uid)
+        .then((search) => {
+          if (search.length) {
+            showVocab(search);
+          } else {
+            emptyVocab();
+          }
+        });
       document.querySelector('#search').value = '';
     }
   });
