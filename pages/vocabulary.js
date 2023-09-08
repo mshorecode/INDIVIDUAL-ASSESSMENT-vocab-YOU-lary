@@ -1,3 +1,4 @@
+import sortButtons from '../components/buttons/sortButtons';
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
@@ -8,6 +9,8 @@ const emptyVocab = () => {
 
 const showVocab = (array) => {
   clearDom();
+
+  sortButtons();
 
   let domString = '';
 
