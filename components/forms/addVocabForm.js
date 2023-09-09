@@ -13,7 +13,7 @@ const addVocabForm = (uid, obj = {}) => {
       <br>
       <div class="form-group">
         <label for="definition">Definition:</label>
-        <textarea class="form-control" placeholder="Definition" id="definition" style="height: 100px">${obj.description || ''}</textarea>
+        <input type="text" class="form-control" placeholder="Definition" id="definition" style="height: 100px">${obj.description || ''}</input>
       </div>
       <br>
       <div class="form-group">
