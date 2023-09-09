@@ -1,5 +1,8 @@
+import { createLanguage, getLanguage, updateLanguage } from '../api/languageData';
 import { createVocabulary, getVocabulary, updateVocabulary } from '../api/vocabularyData';
+import { showLanguage } from '../pages/language';
 import { showVocab } from '../pages/vocabulary';
+import selectedCheckbox from '../utils/checkbox';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -36,6 +39,24 @@ const formEvents = (user) => {
 
       updateVocabulary(payload).then(() => {
         getVocabulary(user.uid).then(showVocab);
+      });
+    }
+    if (e.target.id.includes('checkbox')) {
+      console.warn('This checkbox was selected...', e.target.id);
+      selectedCheckbox(this.id);
+    }
+    if (e.target.id.includes('submit-language')) {
+      const payload = {
+        languageTech: document.querySelector('#language-tech').value,
+        uid: user.uid,
+      };
+
+      createLanguage(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+
+        updateLanguage(patchPayload).then(() => {
+          getLanguage(user.uid).then(showLanguage);
+        });
       });
     }
   });
