@@ -125,7 +125,6 @@ const filterVocabularyByHTML = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// TODO: STRETCH...SEARCH VOCABULARY ENTRIES
 const searchVocabulary = (input, uid) => new Promise((resolve, reject) => {
   getVocabulary(uid).then((array) => {
     const results = array.filter((vocab) => (
