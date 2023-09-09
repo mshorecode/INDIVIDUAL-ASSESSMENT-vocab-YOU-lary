@@ -12,23 +12,30 @@ const navBar = () => {
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
               <a class="nav-link" href="#" id="all-vocabulary">
-                All Vocabulary <span class="sr-only">(current)</span>
+               Vocabulary <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" id="create-entry">Create Entry</a>
             </li>
-            <li>
-            <input
-              class="form-control mr-sm-2"
-              id="search"
-              placeholder="Search Vocabulary Words"
-              aria-label="Search"
-            />
+            <li class="nav-item active">
+              <a class="nav-link" href="#" id="all-language">
+                Languages <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="create-language">Create Language</a>
             </li>
           </ul>
+          <div id="search-container">
+            <input
+                class="form-control mr-sm-2"
+                id="search"
+                placeholder="Search Vocabulary Words"
+                aria-label="Search"
+            />
+          </div>
           <span class="navbar-text">
-            <div id="cart-button"></div>
             <div id="logout-button"></div>
           </span>
         </div>
