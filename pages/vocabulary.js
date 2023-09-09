@@ -12,15 +12,6 @@ const showVocab = (array) => {
 
   sortButtons();
 
-  const sortDropdown = `
-  <select>
-    <option>Alphabetically</option>
-    <option>Ascending</option>
-    <option>Descending</option>
-  </select>`;
-
-  renderToDOM('#view', sortDropdown);
-
   let domString = '';
 
   if (array.length < 1) {

@@ -61,3 +61,15 @@ h1 {
   font-weight: 700;
   text-shadow: 1px 1px 2px #282828;
 }
+
+#sort-buttons {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 3em;
+
+  #sort-drop {
+    margin-left: 2em;
+  }
+}
