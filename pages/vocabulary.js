@@ -12,15 +12,6 @@ const showVocab = (array) => {
 
   sortButtons();
 
-  const sortDropdown = `
-  <select>
-    <option>Alphabetically</option>
-    <option>Ascending</option>
-    <option>Descending</option>
-  </select>`;
-
-  renderToDOM('#view', sortDropdown);
-
   let domString = '';
 
   if (array.length < 1) {
@@ -29,7 +20,7 @@ const showVocab = (array) => {
     array.forEach((item) => {
       domString += `
         <div class="card">
-          <div class="card-body" style="height: 180px;">
+          <div class="card-body">
             <h5 class="card-title">${item.title}</h5>
               <p class="card-text bold">Definition: ${item.definition}</p>
               <hr>
