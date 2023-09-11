@@ -1,4 +1,4 @@
-Vocab-YOU-lary [![Netlify Status](https://api.netlify.com/api/v1/badges/f4d9c22a-f1b4-4152-a50e-3d2c92d952ae/deploy-status)](https://app.netlify.com/sites/rs-vocab-you-lary/deploys)
+# Vocab-YOU-lary [![Netlify Status](https://api.netlify.com/api/v1/badges/f4d9c22a-f1b4-4152-a50e-3d2c92d952ae/deploy-status)](https://app.netlify.com/sites/rs-vocab-you-lary/deploys)
 <!-- update the netlify badge above with your own badge that you can find at netlify under settings/general#status-badges -->
 
 Here I am putting an overview of what my project is about.
@@ -18,10 +18,14 @@ Here I am putting an overview of what my project is about.
 - Creation of a language list is available.
 
 ## Video Walkthrough of APP NAME <!-- A loom link is sufficient -->
-<div style="position: relative; padding-bottom: 55.208333333333336%; height: 0;">
-    <iframe src="https://www.loom.com/embed/262c3d5d39cf46c7b6c407e8c3ad99b3?sid=f9290b1f-1090-411f-8f47-5b04914e431d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-    </iframe>
-</div>
+<div>
+    <a href="https://www.loom.com/share/262c3d5d39cf46c7b6c407e8c3ad99b3">
+      <p>Welcome to Vocabulary Start Page - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/262c3d5d39cf46c7b6c407e8c3ad99b3">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/262c3d5d39cf46c7b6c407e8c3ad99b3-with-play.gif">
+    </a>
+  </div>
 
 ## Relevant Links <!-- Link to all the things that are required outside of the ones that have their own section -->
 - [Check out the deployed site](https://main--rs-vocab-you-lary.netlify.app/)
